@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 NFL Draft Prospects</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        
+        #globe-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: #333;
+            text-shadow: 0 0 5px rgba(255,255,255,0.5);
+            z-index: 10;
+            pointer-events: none;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            width: 180px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 100;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .tooltip-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 10px;
+        }
+        
+        .tooltip-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .tooltip-name {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 5px;
+            text-align: center;
+        }
+        
+        .tooltip-details {
+            font-size: 14px;
+            color: #555;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .tooltip-grade {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin: 5px 0 0;
+        }
+    </style>
+    <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <div id="globe-container"></div>
+    <h1 class="title">2024 NFL Draft Prospects</h1>
+    
+    <div class="tooltip" id="tooltip">
+        <div class="tooltip-image" id="tooltip-image">
+            <img id="tooltip-img-src" src="" alt="">
+        </div>
+        <p class="tooltip-name" id="tooltip-name"></p>
+        <p class="tooltip-details" id="tooltip-details"></p>
+        <p class="tooltip-grade" id="tooltip-grade"></p>
+    </div>
+
+    <script>
+        // Prospect data
+        const prospects = [
+            {
+                name: "Jordan McAllister",
+                position: "DE",
+                college: "Rutgers",
+                grade: "6.36",
+                image: "Headshots/Jordan_McAllister.png",
+                url: "ProspectWebs/jordanmcallister.html"
+            },
+            {
+                name: "Malik Henderson",
+                position: "RB",
+                college: "Temple",
+                grade: "6.29",
+                image: "Headshots/Malik_Henderson.png",
+                url: "ProspectWebs/malikhenderson.html"
+            },
+            {
+                name: "Ethan Caldwell",
+                position: "DT",
+                college: "Washington State",
+                grade: "5.80",
+                image: "Headshots/Ethan_Caldwell.png",
+                url: "ProspectWebs/ethancaldwell.html"
+            },
+            {
+                name: "Darius Monroe",
+                position: "OG",
+                college: "Houston",
+                grade: "6.21",
+                image: "Headshots/Darius_Monroe.png",
+                url: "ProspectWebs/dariusmonroe.html"
+            },
+            {
+                name: "Isaiah Trent",
+                position: "CB",
+                college: "USC",
+                grade: "6.00",
+                image: "Headshots/Isaiah_Trent.png",
+                url: "ProspectWebs/isaiahtrent.html"
+            },
+            {
+                name: "Jalen Ross",
+                position: "QB",
+                college: "Texas A&M",
+                grade: "6.50",
+                image: "Headshots/Jalen_Ross.png",
+                url: "ProspectWebs/jalenross.html"
+            },
+            {
+                name: "Marcus Steele",
+                position: "CB",
+                college: "Louisiana Tech",
+                grade: "6.48",
+                image: "Headshots/Marcus_Steele.png",
+                url: "ProspectWebs/marcussteele.html"
+            },
+            {
+                name: "Andre Whitaker",
+                position: "LB",
+                college: "UCLA",
+                grade: "5.84",
+                image: "Headshots/Andre_Whitaker.png",
+                url: "ProspectWebs/andrewhitaker.html"
+            }
+        ];
+
+        // Initialize scene
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xf0f0f0);
+        
+        // Initialize camera
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 7;
+        
+        // Initialize renderer
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('globe-container').appendChild(renderer.domElement);
+        
+        // Add orbit controls
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.rotateSpeed = 0.5;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.5;
+        
+        // Create geodesic sphere (icosahedron)
+        const sphereGeometry = new THREE.IcosahedronGeometry(3, 2);
+        const sphereMaterial = new THREE.MeshBasicMaterial({
+            color: 0xe0e0e0, // Single color without lighting
+            wireframe: false
+        });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        scene.add(sphere);
+        
+        // Create a circular texture for the points
+        function createCircleTexture() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 64;
+            canvas.height = 64;
+            const context = canvas.getContext('2d');
+            
+            // Draw a circle
+            context.beginPath();
+            context.arc(32, 32, 28, 0, 2 * Math.PI);
+            context.fillStyle = 'white';
+            context.fill();
+            
+            const texture = new THREE.CanvasTexture(canvas);
+            return texture;
+        }
+        
+        // Distribute points evenly on a sphere
+        function distributePointsOnSphere(n, radius) {
+            const points = [];
+            const phi = Math.PI * (3 - Math.sqrt(5)); // Golden angle
+            
+            for (let i = 0; i < n; i++) {
+                const y = 1 - (i / (n - 1)) * 2; // y goes from 1 to -1
+                const r = Math.sqrt(1 - y * y); // radius at y
+                
+                const theta = phi * i; // Golden angle increment
+                
+                const x = Math.cos(theta) * r;
+                const z = Math.sin(theta) * r;
+                
+                points.push({
+                    position: new THREE.Vector3(x * radius, y * radius, z * radius),
+                    data: prospects[i % prospects.length]
+                });
+            }
+            
+            return points;
+        }
+        
+        // Create prospect dots using Points
+        const prospectPoints = distributePointsOnSphere(prospects.length, 3.5);
+        
+        // Create individual points for better control
+        const pointObjects = [];
+        const pointMeshes = [];
+        
+        prospectPoints.forEach((point, index) => {
+            // Create a sprite for circular appearance
+            const spriteMaterial = new THREE.SpriteMaterial({
+                map: createCircleTexture(),
+                color: 0x3366ff,
+                sizeAttenuation: true
+            });
+            
+            const sprite = new THREE.Sprite(spriteMaterial);
+            sprite.position.copy(point.position);
+            sprite.scale.set(0.2, 0.2, 0.2);
+            sprite.userData = {
+                isProspect: true,
+                prospectData: point.data,
+                originalScale: sprite.scale.clone(),
+                index: index
+            };
+            
+            scene.add(sprite);
+            pointMeshes.push(sprite);
+            pointObjects.push(point);
+        });
+        
+        // Create connections that wrap around the sphere and connect to dots
+        function createGreatCircleConnections() {
+            for (let i = 0; i < pointObjects.length; i++) {
+                const source = pointObjects[i];
+                
+                // Connect to 2-3 nearest neighbors
+                const neighbors = [];
+                
+                for (let j = 0; j < pointObjects.length; j++) {
+                    if (i !== j) {
+                        const target = pointObjects[j];
+                        const distance = source.position.distanceTo(target.position);
+                        neighbors.push({ index: j, distance: distance });
+                    }
+                }
+                
+                // Sort by distance and take closest
+                neighbors.sort((a, b) => a.distance - b.distance);
+                const connectCount = 2 + Math.floor(Math.random() * 2); // 2-3 connections
+                
+                for (let k = 0; k < Math.min(connectCount, neighbors.length); k++) {
+                    const targetIndex = neighbors[k].index;
+                    
+                    // Create a great circle arc between the two points
+                    createGreatCircleArc(source.position, pointObjects[targetIndex].position);
+                }
+            }
+        }
+        
+        // Create a great circle arc between two points
+        function createGreatCircleArc(startPoint, endPoint) {
+            // Use the actual point positions (not normalized)
+            const start = startPoint.clone();
+            const end = endPoint.clone();
+            
+            // Get normalized vectors for calculation
+            const startNorm = start.clone().normalize();
+            const endNorm = end.clone().normalize();
+            const angle = startNorm.angleTo(endNorm);
+            const axis = new THREE.Vector3().crossVectors(startNorm, endNorm).normalize();
+            
+            // Create points along the great circle
+            const numPoints = 50;
+            const points = [];
+            
+            for (let i = 0; i <= numPoints; i++) {
+                const t = i / numPoints;
+                
+                // Create quaternion for rotation
+                const quat = new THREE.Quaternion().setFromAxisAngle(axis, angle * t);
+                
+                // Apply rotation to start point
+                const pointNorm = startNorm.clone().applyQuaternion(quat);
+                
+                // Scale to sphere radius plus a small offset
+                pointNorm.multiplyScalar(3.05); // Slightly above sphere surface
+                
+                points.push(pointNorm);
+            }
+            
+            // Create line geometry
+            const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+            
+            // Create dashed line material for surging effect
+            const lineMaterial = new THREE.LineDashedMaterial({
+                color: 0xffffff, // White color
+                dashSize: 0.5,
+                gapSize: 0.3,
+                opacity: 0.8,
+                transparent: true
+            });
+            
+            // Create line
+            const line = new THREE.Line(lineGeometry, lineMaterial);
+            line.computeLineDistances(); // Required for dashed lines
+            scene.add(line);
+            
+            // Animate the dash offset for surging effect
+            line.userData = {
+                offset: Math.random() * 2, // Random starting offset
+                speed: 0.1 + Math.random() * 0.1 // Faster speed for more visible surging
+            };
+            
+            return line;
+        }
+        
+        // Create the connections
+        createGreatCircleConnections();
+        
+        // Handle tooltip
+        const tooltip = document.getElementById('tooltip');
+        const tooltipImg = document.getElementById('tooltip-img-src');
+        const tooltipName = document.getElementById('tooltip-name');
+        const tooltipDetails = document.getElementById('tooltip-details');
+        const tooltipGrade = document.getElementById('tooltip-grade');
+        
+        // Raycaster for interaction
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        let hoveredPoint = null;
+        
+        // Mouse move event
+        window.addEventListener('mousemove', (event) => {
+            // Calculate mouse position in normalized device coordinates
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        });
+        
+        // Click event
+        window.addEventListener('click', () => {
+            if (hoveredPoint) {
+                window.location.href = hoveredPoint.userData.prospectData.url;
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+        
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // Update controls
+            controls.update();
+            
+            // Check for intersections
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(pointMeshes);
+            
+            // Reset previously hovered point
+            if (hoveredPoint && (!intersects.length || intersects[0].object !== hoveredPoint)) {
+                hoveredPoint.scale.copy(hoveredPoint.userData.originalScale);
+                hoveredPoint = null;
+                tooltip.style.display = 'none';
+                controls.autoRotate = true;
+            }
+            
+            // Handle new hover
+            if (intersects.length > 0) {
+                hoveredPoint = intersects[0].object;
+                
+                // Make only the hovered point larger
+                hoveredPoint.scale.set(0.4, 0.4, 0.4);
+                
+                // Update tooltip
+                const data = hoveredPoint.userData.prospectData;
+                tooltipImg.src = data.image;
+                tooltipName.textContent = data.name;
+                tooltipDetails.textContent = `${data.position} • ${data.college}`;
+                tooltipGrade.textContent = data.grade;
+                
+                // Position tooltip
+                const vector = new THREE.Vector3();
+                vector.setFromMatrixPosition(hoveredPoint.matrixWorld);
+                vector.project(camera);
+                
+                const x = (vector.x * 0.5 + 0.5) * window.innerWidth;
+                const y = (-vector.y * 0.5 + 0.5) * window.innerHeight;
+                
+                tooltip.style.display = 'block';
+                tooltip.style.left = `${x + 20}px`;
+                tooltip.style.top = `${y - 100}px`;
+                
+                // Stop auto-rotation when hovering
+                controls.autoRotate = false;
+            }
+            
+            // Animate line dash offset for surging effect
+            scene.children.forEach(child => {
+                if (child.isLine && child.userData && child.userData.hasOwnProperty('offset')) {
+                    child.userData.offset += child.userData.speed;
+                    child.material.dashOffset = child.userData.offset;
+                }
+            });
+            
+            renderer.render(scene, camera);
+        }
+        
+        animate();
+    </script>
+</body>
+</html>
