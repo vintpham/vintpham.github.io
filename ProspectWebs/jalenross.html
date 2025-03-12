@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Prospect Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .block {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .headshot-block {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .info-block {
+            flex: 2;
+            margin-right: 20px;
+        }
+        .grade-block {
+            flex: 1;
+        }
+        .profile-image {
+            width: 225px;
+            height: 225px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .info-row > div {
+            margin-right: 20px;
+        }
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px 0;
+        }
+        .physical-attributes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .info-item {
+            margin-bottom: 5px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        .view-all {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .view-all a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .view-all a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-section">
+        <div class="block headshot-block">
+            <div class="profile-image">
+                <img src="../Headshots/Jalen_Ross.png" alt="Jalen Ross Headshot" style="width:225px;height: 225px;;">
+            </div>
+            <h2>Jalen Ross</h2>
+            <p><strong>Position:</strong> QB</p>
+        </div>
+
+        <div class="block info-block">
+            <h2>Prospect Info</h2>
+            <div class="info-item"><strong>College:</strong> Texas A&M</div>
+            
+            <div class="info-row">
+                <div class="info-item"><strong>Hometown:</strong> Pittsburgh, PA</div>
+                <div class="info-item"><strong>Class:</strong> R-Junior</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="physical-attributes">
+                <div class="info-item"><strong>Height:</strong> 5’ 10’’</div>
+                <div class="info-item"><strong>Weight:</strong> 207 lbs</div>
+                <div class="info-item"><strong>Arm:</strong> 31 9/8’’</div>
+                <div class="info-item"><strong>Hand:</strong> 9 3/4’’</div>
+            </div>
+        </div>
+
+        <div class="block grade-block">
+            <h2>Prospect Grade</h2>
+            <p style="font-size: 80px; text-align: center; margin: 20px 0;">6.16</p>
+            <div class="divider"></div>
+            <div class="view-all">
+                <a href="../homepage2.html">View All Prospects</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Player Bio</h2>
+        <ul>
+            <li>2020: Did not play due to COVID-related medical issues.</li>
+            <li>2021: Played in nine games with six starts at quarterback (117-212-56.8, 1,410 yards, 8 TDs, 2 INTs).</li>
+            <li>2022: Honorable Mention All-SEC. Started the first seven games before suffering an injury that sidelined him for the remainder of the year. (120-223-53.8, 1,430 yards, 12 TDs, 5 INTs)</li>
+            <li>2023: Second Team Associated Press All-American. Third Team Walter Camp All-American. First Team All-SEC. Set school single-season records with 32 total offensive TDs scored and 24 rushing scores. Set career record with 42 rushing scores. Led the SEC with 1,634 rushing yards. Won the Johnny Unitas Golden Arm Award (nation's top QB).</li>
+        </ul>
+
+        <h2>Analysis</h2>
+        <div class="divider"></div>
+        
+        <h3>Overview</h3>
+        <p>Ross has had plenty of success flashing his ability to throw accurately on time and off schedule during his three seasons in the program, and he was able to do so inside and outside the pocket in 2023. He possesses the physical tools needed to make accurate throws downfield and does a nice job creating space within the structure of the offense to move around and find openings, which helps keep defenses honest. While there are some mechanical concerns that could cause problems if he is forced to press the action, his playmaking ability should earn him a chance to compete for a backup job.</p>
+        <div class="divider"></div>
+        
+        <h3>Strengths</h3>
+        <ul>
+            <li>Uses excellent feel and rhythmic stride timing in his dropbacks.</li>
+            <li>Plays with good anticipation and touch when leading receivers through windows.</li>
+            <li>Fires deep balls quickly but still manages to put them where only his receiver can catch it.Weaves through traffic without much wasted motion when looking to extend plays.</li>
+            <li>Races away from pressure while maintaining good ball security.</li>
+        </ul>
+        <div class="divider"></div>
+        
+        <h3>Weaknesses</h3>
+        <ul>
+            <li>Tends to be too deliberate when processing from his initial spot behind center.</li>
+            <li>Has trouble finding the correct throwing lane against zone coverage.</li>
+            <li>Doesn't have ideal size or length to consistently fit throws over smaller defenders.</li>
+            <li>Will occasionally take unnecessary hits after scrambling out of pocket.</li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+</body>
+</html>

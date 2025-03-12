@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Prospect Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .block {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .headshot-block {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .info-block {
+            flex: 2;
+            margin-right: 20px;
+        }
+        .grade-block {
+            flex: 1;
+        }
+        .profile-image {
+            width: 225px;
+            height: 225px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .info-row > div {
+            margin-right: 20px;
+        }
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px 0;
+        }
+        .physical-attributes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .info-item {
+            margin-bottom: 5px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        .view-all {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .view-all a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .view-all a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-section">
+        <div class="block headshot-block">
+            <div class="profile-image">
+                <img src="../Headshots/Ethan_Caldwell.png" alt="Ethan Caldwell Headshot" style="width:225px;height: 225px;;">
+            </div>
+            <h2>Ethan Caldwell</h2>
+            <p><strong>Position:</strong> DT</p>
+        </div>
+
+        <div class="block info-block">
+            <h2>Prospect Info</h2>
+            <div class="info-item"><strong>College:</strong> Washington State</div>
+            
+            <div class="info-row">
+                <div class="info-item"><strong>Hometown:</strong> Kenosha, WI</div>
+                <div class="info-item"><strong>Class:</strong> Senior</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="physical-attributes">
+                <div class="info-item"><strong>Height:</strong> 6’ 2’’</div>
+                <div class="info-item"><strong>Weight:</strong> 318 lbs</div>
+                <div class="info-item"><strong>Arm:</strong> 34 7/8’’</div>
+                <div class="info-item"><strong>Hand:</strong> 9 5/8’’</div>
+            </div>
+        </div>
+
+        <div class="block grade-block">
+            <h2>Prospect Grade</h2>
+            <p style="font-size: 80px; text-align: center; margin: 20px 0;">5.80</p>
+            <div class="divider"></div>
+            <div class="view-all">
+                <a href="../homepage2.html">View All Prospects</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Player Bio</h2>
+        <ul>
+            <li>2022: Played in all 13 games with five starts (26 tackles, eight TFL with one sack).</li>
+            <li>2023: Honorable Mention All-Pac-12 Conference. Led the team with nine TFL with three sacks and two PBUs.</li>
+        </ul>
+
+        <h2>Analysis</h2>
+        <div class="divider"></div>
+        
+        <h3>Overview</h3>
+        <p>Three-down defender who has the size and play strength to handle the run game but can also rush from a two-, three- or four-point stance. He's not as twitchy as an edge rusher but can still win around the corner when he lands his punch on the outside arm of the blocker, creating leverage pressure for himself while working downhill toward the quarterback.His ability to bull-rush and create inside disruption is well below average and could be a major concern when it comes time to set up a pass rush plan at the next level. His hand usage is somewhat limited and doesn't have much counter move work off those hands.Calwell will need some coaching to become a more consistent impact player, but there are traits to suggest that he could develop into an effective role piece who can provide value against both the run and the pass.</p>
+        <div class="divider"></div>
+        
+        <h3>Strengths</h3>
+        <ul>
+            <li>Long arms and big frame provide good length through contact.</li>
+            <li>Experienced starter capable of playing multiple techniques and rushing from various alignments.</li>
+            <li>Has the anchor power to hold back blockers trying to steer him away from target area.</li>
+            <li>Plays with active feet and shortens distance to disrupt early.</li>
+            <li>Uses upper body to control blocker once they engage.</li>
+        </ul>
+        <div class="divider"></div>
+        
+        <h3>Weaknesses</h3>
+        <ul>
+            <li>Needs to find better pad level as point of attack rusher.</li>
+            <li>Average foot quickness plays catch-up getting into lateral pursuit flow.</li>
+            <li>Slow acceleration out of turns can lead to missed attempts at chase plays.</li>
+            <li>Consistency and effort aren't always there over the course of a full game.</li>
+            <li>Pass sets lack consistency in placement and timing.</li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+</body>
+</html>

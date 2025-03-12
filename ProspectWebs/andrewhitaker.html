@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Prospect Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .block {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .headshot-block {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .info-block {
+            flex: 2;
+            margin-right: 20px;
+        }
+        .grade-block {
+            flex: 1;
+        }
+        .profile-image {
+            width: 225px;
+            height: 225px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .info-row > div {
+            margin-right: 20px;
+        }
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px 0;
+        }
+        .physical-attributes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .info-item {
+            margin-bottom: 5px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        .view-all {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .view-all a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .view-all a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-section">
+        <div class="block headshot-block">
+            <div class="profile-image">
+                <img src="../Headshots/Andre_Whitaker.png" alt="Andre Whitaker Headshot" style="width:225px;height: 225px;;">
+            </div>
+            <h2>Andre Whitaker</h2>
+            <p><strong>Position:</strong> LB</p>
+        </div>
+
+        <div class="block info-block">
+            <h2>Prospect Info</h2>
+            <div class="info-item"><strong>College:</strong> UCLA</div>
+            
+            <div class="info-row">
+                <div class="info-item"><strong>Hometown:</strong> Largo, FL</div>
+                <div class="info-item"><strong>Class:</strong> Junior</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="physical-attributes">
+                <div class="info-item"><strong>Height:</strong> 6’ 1’’</div>
+                <div class="info-item"><strong>Weight:</strong> 208 lbs</div>
+                <div class="info-item"><strong>Arm:</strong> 30 7/8’’</div>
+                <div class="info-item"><strong>Hand:</strong> 9 5/8’’</div>
+            </div>
+        </div>
+
+        <div class="block grade-block">
+            <h2>Prospect Grade</h2>
+            <p style="font-size: 80px; text-align: center; margin: 20px 0;">5.84</p>
+            <div class="divider"></div>
+            <div class="view-all">
+                <a href="../homepage2.html">View All Prospects</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="block">
+        <h2>Player Bio</h2>
+        <ul>
+            <li>2021: Played in all 15 games as a freshman (no stats).</li>
+            <li>2022: Played in two games at LB and one game on special teams during his second season (two tackles)</li>
+            <li>2023: Honorable Mention All-Pac-12 Conference...appeared in 10 games with four starts for team that went undefeated (third-team AP All-American)</li>
+        </ul>
+
+        <h2>Analysis</h2>
+        <div class="divider"></div>
+        
+        <h3>Overview</h3>
+        <p>Whitaker has size limitations but plays bigger than you might think given how explosive he is. When watching him play safety over linebacker I could see why some wonder if either position would be best suited long term for this physical defender who possesses terrific range once he gets moving forward as well as ball skills that can help cover tight ends in man coverage situations.</p>
+        <div class="divider"></div>
+        
+        <h3>Strengths</h3>
+        <ul>
+            <li>Size doesn"t limit athleticism.</li>
+            <li>Has quickness and instinctiveness to close while making hits near the sideline.</li>
+            <li>Whipped around blockers en route to getting backside pursuit tackle vs. Utah</li>
+        </ul>
+        <div class="divider"></div>
+        
+        <h3>Weaknesses</h3>
+        <ul>
+            <li>Sniffing out underneath zone runs will take experience and recognition skill development.</li>
+            <li>Tries too hard to make every pass breakup look like a splashy highlight reel grab rather than just playing football soundly.</li>
+            <li>Struggles working through traffic and keeping feet active for open field recovery speed.</li>
+        </ul>
+        <div class="divider"></div>
+        
+        <h3>Sources Tell Us</h3>
+        <p>“He”ll run himself backwards more often than not trying to chase everything.” - NFC area scout</p>
+    </div>
+</body>
+</html>

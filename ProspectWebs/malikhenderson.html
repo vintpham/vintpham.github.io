@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Prospect Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .block {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .headshot-block {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .info-block {
+            flex: 2;
+            margin-right: 20px;
+        }
+        .grade-block {
+            flex: 1;
+        }
+        .profile-image {
+            width: 225px;
+            height: 225px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .info-row > div {
+            margin-right: 20px;
+        }
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px 0;
+        }
+        .physical-attributes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .info-item {
+            margin-bottom: 5px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        .view-all {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .view-all a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .view-all a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-section">
+        <div class="block headshot-block">
+            <div class="profile-image">
+                <img src="../Headshots/Malik_Henderson.png" alt="Malik Henderson Headshot" style="width:225px;height: 225px;;">
+            </div>
+            <h2>Malik Henderson</h2>
+            <p><strong>Position:</strong> RB</p>
+        </div>
+
+        <div class="block info-block">
+            <h2>Prospect Info</h2>
+            <div class="info-item"><strong>College:</strong> Temple</div>
+            
+            <div class="info-row">
+                <div class="info-item"><strong>Hometown:</strong> Marietta, GA</div>
+                <div class="info-item"><strong>Class:</strong> Senior</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="physical-attributes">
+                <div class="info-item"><strong>Height:</strong> 6’ 1’’</div>
+                <div class="info-item"><strong>Weight:</strong> 185 lbs</div>
+                <div class="info-item"><strong>Arm:</strong> 29 3/4’’</div>
+                <div class="info-item"><strong>Hand:</strong> 9 1/4’’</div>
+            </div>
+        </div>
+
+        <div class="block grade-block">
+            <h2>Prospect Grade</h2>
+            <p style="font-size: 80px; text-align: center; margin: 20px 0;">6.29</p>
+            <div class="divider"></div>
+            <div class="view-all">
+                <a href="../homepage2.html">View All Prospects</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Player Bio</h2>
+        <ul>
+            <li>2025: Led the team with 1,212 rushing yards.</li>
+            <li>2026: Led the team with 1,154 rushing yards (236 carries, 4.9 per, 6 TDs rushing).</li>
+            <li>2027: Led the team with 1,510 rushing yards, 15 TDs rushing.7-78-11.2 KR; 28-456-16.3 on PR. First-team All-American.
+
+                First-team All-ACC.
+                
+                FedEx Orange Bowl MVP.</li>
+        </ul>
+
+        <h2>Analysis</h2>
+        <div class="divider"></div>
+        
+        <h3>Overview</h3>
+        <p>[Overview Placeholder]</p>
+        <div class="divider"></div>
+        
+        <h3>Strengths</h3>
+        <ul>
+            <li>Long strider with explosive cutting ability.</li>
+            <li>Can hit the ground running and accelerate through and past contact.</li>
+            <li>Compact running style allows him to hit holes without a lot of wasted motion.</li>
+            <li>Tendency to make one-cut counters and inside-zone runs without much hesitation.</li>
+            <li>Will consistently make more plays after initial contact than some of his peers.</li>
+        </ul>
+        <div class="divider"></div>
+        
+        <h3>Weaknesses</h3>
+        <ul>
+            <li>Has the tendency to cut back out of instinct.</li>
+            <li>Misjudges fits and angles due to lack of vision or focus.</li>
+            <li>Goes way too fast when breaking from one-cut counters.</li>
+            <li>Will rush his footwork and miss on proper alignments post-release.</li>
+            <li>Doesn’t look to be able to control his speed to properly adjust to a moving defender.</li>
+        </ul>
+        <div class="divider"></div>
+    </div>
+</body>
+</html>

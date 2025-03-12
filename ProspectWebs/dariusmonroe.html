@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Prospect Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .block {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .headshot-block {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .info-block {
+            flex: 2;
+            margin-right: 20px;
+        }
+        .grade-block {
+            flex: 1;
+        }
+        .profile-image {
+            width: 225px;
+            height: 225px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .info-row > div {
+            margin-right: 20px;
+        }
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px 0;
+        }
+        .physical-attributes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .info-item {
+            margin-bottom: 5px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        .view-all {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .view-all a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .view-all a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-section">
+        <div class="block headshot-block">
+            <div class="profile-image">
+                <img src="../Headshots/Darius_Monroe.png" alt="Darius Monroe Headshot" style="width:225px;height: 225px;;">
+            </div>
+            <h2>Darius Monroe</h2>
+            <p><strong>Position:</strong> OG</p>
+        </div>
+
+        <div class="block info-block">
+            <h2>Prospect Info</h2>
+            <div class="info-item"><strong>College:</strong> Houston</div>
+            
+            <div class="info-row">
+                <div class="info-item"><strong>Hometown:</strong> Cleveland, OH</div>
+                <div class="info-item"><strong>Class:</strong> Senior</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="physical-attributes">
+                <div class="info-item"><strong>Height:</strong> 6’ 3 1/2’’</div>
+                <div class="info-item"><strong>Weight:</strong> 305 lbs</div>
+                <div class="info-item"><strong>Arm:</strong> 34 7/8’’</div>
+                <div class="info-item"><strong>Hand:</strong> 9 3/8’’</div>
+            </div>
+        </div>
+
+        <div class="block grade-block">
+            <h2>Prospect Grade</h2>
+            <p style="font-size: 80px; text-align: center; margin: 20px 0;">6.21</p>
+            <div class="divider"></div>
+            <div class="view-all">
+                <a href="../homepage2.html">View All Prospects</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Player Bio</h2>
+        <ul>
+            <li>2020: Played in all nine games (all starts) at RG.</li>
+            <li>2021: Second-team All-American Athletic Conference. Started all 13 games (RG).</li>
+            <li>2022: Honorable Mention All-ACC. Started all 13 games (RG).</li>
+        </ul>
+
+        <h2>Analysis</h2>
+        <div class="divider"></div>
+        
+        <h3>Overview</h3>
+        <p>Big, strong interior lineman who carries his weight well and doesn't look like much of a project from a physical standpoint. Monroe is a productive lead blocker with the size and skill to become an NFL starter. He's well-built, runs his feet and does a good job of driving into defenders. He also plays the game with enough toughness and aggression that he can be used as a goal line runner or short yardage specialist on occasion.</p>
+        <div class="divider"></div>
+        
+        <h3>Strengths</h3>
+        <ul>
+            <li>Awareness in pass protection to work around rush moves and avoid big hits.</li>
+            <li>Has experience working inside or outside at point of attack.</li>
+            <li>Plays through defenders without letting them disrupt his footwork.</li>
+            <li>Uses length and power to drive tackles back off the point of attack.</li>
+            <li>Flashes solid understanding of how to use his feet to keep base firm and center of gravity low.</li>
+        </ul>
+        <div class="divider"></div>
+        
+        <h3>Weaknesses</h3>
+        <ul>
+            <li>Lacks explosiveness out of his stance when run blocking.</li>
+            <li>Tends to fall backwards instead of forward when finishing blocks.</li>
+        </ul>
+        <div class="divider"></div>
+        
+        <h3>Sources Tell Us</h3>
+        <p>"He'll need to become more consistent and play with better pad level, but I think he has some traits you want." - AFC national scout</p>
+    </div>
+</body>
+</html>
