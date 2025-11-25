@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d1117;
+    font-family: 'Courier New', monospace;
+    color: #58a6ff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#terminal {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#terminal-output {
+    margin-bottom: 10px;
+}
+
+.output-line {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.command-line {
+    color: #7ee787;
+}
+
+.error {
+    color: #f85149;
+}
+
+.success {
+    color: #7ee787;
+}
+
+.info {
+    color: #58a6ff;
+}
+
+.warning {
+    color: #f0883e;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+}
+
+#prompt {
+    color: #7ee787;
+    margin-right: 5px;
+}
+
+#terminal-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #c9d1d9;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    flex: 1;
+    caret-color: #7ee787;
+}
+
+.ascii-art {
+    color: #58a6ff;
+    white-space: pre;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.project-item {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+li::before {
+    content: "▸ ";
+    color: #7ee787;
+}
