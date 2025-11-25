@@ -10,7 +10,7 @@ const commands = {
   <span class="success">skills</span>     - See my technical skills<br>
   <span class="success">contact</span>    - Get my contact information<br>
   <span class="success">education</span>  - View my education background<br>
-  <span class="success">resume</span>    - View or download my resume<br>
+  <span class="success">resume</span>     - View or download my resume<br>
   <span class="success">clear</span>      - Clear the terminal<br>
   <span class="success">help</span>       - Display this help message<br>
 <br>
@@ -27,7 +27,7 @@ Type any command to get started!
 <br>
 Hello, I'm a Computer Science student at the University of Washington, expected to graduated December 2025.<br>
 I am currently seeking to use my academic knowledge and practical skills to leverage an internship or<br>
-full time position, in order to contribute to organizational success and foster innovation.
+full time position, in order to contribute to organizational success and foster innovation.<br>
 <br>
 I specialize in:<br>
   • Flutter app development<br>
