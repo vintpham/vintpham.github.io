@@ -10,6 +10,7 @@ const commands = {
   <span class="success">skills</span>     - See my technical skills<br>
   <span class="success">contact</span>    - Get my contact information<br>
   <span class="success">education</span>  - View my education background<br>
+  <span class="success">resume></span>    - View or download my resume<br>
   <span class="success">clear</span>      - Clear the terminal<br>
   <span class="success">help</span>       - Display this help message<br>
 <br>
