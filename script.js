@@ -4,15 +4,15 @@ const commands = {
         execute: () => {
             return `
 <span class="info">Available Commands:</span>
-
-  <span class="success">about</span>      - Learn about me
-  <span class="success">projects</span>   - View my projects
-  <span class="success">skills</span>     - See my technical skills
-  <span class="success">contact</span>    - Get my contact information
-  <span class="success">education</span>  - View my education background
-  <span class="success">clear</span>      - Clear the terminal
-  <span class="success">help</span>       - Display this help message
-
+<br><br>
+  <span class="success">about</span>      - Learn about me<br>
+  <span class="success">projects</span>   - View my projects<br>
+  <span class="success">skills</span>     - See my technical skills<br>
+  <span class="success">contact</span>    - Get my contact information<br>
+  <span class="success">education</span>  - View my education background<br>
+  <span class="success">clear</span>      - Clear the terminal<br>
+  <span class="success">help</span>       - Display this help message<br>
+<br>
 Type any command to get started!
             `;
         }
@@ -21,19 +21,19 @@ Type any command to get started!
         description: "Learn about me",
         execute: () => {
             return `
-<span class="info">About Me</span>
-────────────────────────────────────────
-
-Hey! I'm a Computer Science student passionate about 
-software development, mobile applications, and data analysis.
-
-I specialize in:
-  • Flutter app development
-  • Data analysis with R
-  • Cybersecurity concepts
-  • Full-stack development
-
-When I'm not coding, I enjoy analyzing baseball statistics
+<span class="info">About Me</span><br>
+────────────────────────────────────────<br>
+<br>
+Hey! I'm a Computer Science student passionate about <br>
+software development, mobile applications, and data analysis.<br>
+<br>
+I specialize in:<br>
+  • Flutter app development<br>
+  • Data analysis with R<br>
+  • Cybersecurity concepts<br>
+  • Full-stack development<br>
+<br>
+When I'm not coding, I enjoy analyzing baseball statistics<br>
 and exploring game design mechanics.
             `;
         }
@@ -42,22 +42,22 @@ and exploring game design mechanics.
         description: "View my projects",
         execute: () => {
             return `
-<span class="info">Projects</span>
-────────────────────────────────────────
-
-<span class="success">1. Flutter Mobile App</span>
-   • Cross-platform mobile application with Provider state management
-   • Features: Local data persistence, API integration, accessibility
-   • Tech: Flutter, Dart, REST APIs
-
-<span class="success">2. Data Analysis Dashboard</span>
-   • Interactive data visualization and statistical analysis
-   • Tech: R, ggplot2, data manipulation libraries
-
-<span class="success">3. Baseball Analytics Tool</span>
-   • Statistical analysis and prediction models for baseball
-   • Tech: Python, pandas, machine learning
-
+<span class="info">Projects</span><br>
+────────────────────────────────────────<br>
+<br>
+<span class="success">1. Flutter Mobile App</span><br>
+   • Cross-platform mobile application with Provider state management<br>
+   • Features: Local data persistence, API integration, accessibility<br>
+   • Tech: Flutter, Dart, REST APIs<br>
+<br>
+<span class="success">2. Data Analysis Dashboard</span><br>
+   • Interactive data visualization and statistical analysis<br>
+   • Tech: R, ggplot2, data manipulation libraries<br>
+<br>
+<span class="success">3. Baseball Analytics Tool</span><br>
+   • Statistical analysis and prediction models for baseball<br>
+   • Tech: Python, pandas, machine learning<br>
+<br>
 Type <span class="warning">'github'</span> to view my GitHub profile
             `;
         }
@@ -66,21 +66,21 @@ Type <span class="warning">'github'</span> to view my GitHub profile
         description: "See my technical skills",
         execute: () => {
             return `
-<span class="info">Technical Skills</span>
-────────────────────────────────────────
-
-<span class="success">Languages:</span>
-  Dart  ████████████████░░  85%
-  R     ███████████████░░░  75%
-  Python████████████████░░  80%
-  Java  ██████████████░░░░  70%
-  SQL   ████████████░░░░░░  65%
-
-<span class="success">Frameworks & Tools:</span>
-  • Flutter & Provider
-  • Git & GitHub
-  • VSCode
-  • Data Visualization
+<span class="info">Technical Skills</span><br>
+────────────────────────────────────────<br>
+<br>
+<span class="success">Languages:</span><br>
+  Dart  ████████████████░░  85%<br>
+  R     ███████████████░░░  75%<br>
+  Python████████████████░░  80%<br>
+  Java  ██████████████░░░░  70%<br>
+  SQL   ████████████░░░░░░  65%<br>
+<br>
+<span class="success">Frameworks & Tools:</span><br>
+  • Flutter & Provider<br>
+  • Git & GitHub<br>
+  • VSCode<br>
+  • Data Visualization<br>
   • Mobile UI/UX Design
             `;
         }
@@ -89,17 +89,17 @@ Type <span class="warning">'github'</span> to view my GitHub profile
         description: "View my education background",
         execute: () => {
             return `
-<span class="info">Education</span>
-────────────────────────────────────────
-
-<span class="success">University of Washington</span>
-Computer Science Major
-
-Relevant Coursework:
-  • Mobile App Development
-  • Data Structures & Algorithms
-  • Data Analysis (INFO201)
-  • Cybersecurity
+<span class="info">Education</span><br>
+────────────────────────────────────────<br>
+<br>
+<span class="success">University of Washington</span><br>
+Computer Science Major<br>
+<br>
+Relevant Coursework:<br>
+  • Mobile App Development<br>
+  • Data Structures & Algorithms<br>
+  • Data Analysis (INFO201)<br>
+  • Cybersecurity<br>
   • Database Systems
             `;
         }
@@ -108,14 +108,14 @@ Relevant Coursework:
         description: "Get my contact information",
         execute: () => {
             return `
-<span class="info">Contact Information</span>
-────────────────────────────────────────
-
-📧 Email:    your.email@example.com
-💼 LinkedIn: linkedin.com/in/yourprofile
-🐙 GitHub:   github.com/yourusername
-📱 Phone:    (123) 456-7890
-
+<span class="info">Contact Information</span><br>
+────────────────────────────────────────<br>
+<br>
+📧 Email:    your.email@example.com<br>
+💼 LinkedIn: linkedin.com/in/yourprofile<br>
+🐙 GitHub:   github.com/yourusername<br>
+📱 Phone:    (123) 456-7890<br>
+<br>
 Feel free to reach out for collaborations or opportunities!
             `;
         }
@@ -147,11 +147,12 @@ const asciiArt = `
 
 const welcomeMessage = `
 <span class="ascii-art">${asciiArt}</span>
-
-<span class="success">Welcome to my interactive portfolio!</span>
-
+<br>
+<span class="success">Welcome to my interactive portfolio!</span><br>
+<br>
 Type <span class="warning">'help'</span> to see available commands.
 `;
+
 
 let commandHistory = [];
 let historyIndex = -1;
