@@ -129,6 +129,13 @@ Feel free to reach out for collaborations or opportunities!
             `;
         }
     },
+    resume: {
+        description: "View or download my resume",
+        execute: () => {
+            window.open('VincentResume.pdf', '_blank');
+            return `Opening resume...`;
+        }
+    },
     github: {
         description: "Open GitHub profile",
         execute: () => {
