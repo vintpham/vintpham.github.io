@@ -24,17 +24,18 @@ Type any command to get started!
 <span class="info">About Me</span><br>
 ────────────────────────────────────────<br>
 <br>
-Hey! I'm a Computer Science student passionate about <br>
-software development, mobile applications, and data analysis.<br>
+Hello, I'm a Computer Science student at the University of Washington, expected to graduated December 2025.<br>
+I am currently seeking to use my academic knowledge and practical skills to leverage an internship or<br>
+full time position, in order to contribute to organizational success and foster innovation.
 <br>
 I specialize in:<br>
   • Flutter app development<br>
-  • Data analysis with R<br>
-  • Cybersecurity concepts<br>
+  • Data analysis<br>
+  • Website developement<br>
   • Full-stack development<br>
 <br>
-When I'm not coding, I enjoy analyzing baseball statistics<br>
-and exploring game design mechanics.
+When I'm not coding, I enjoy hiking, analyzing baseball, basketball and football statistics,<br>
+and exploring game design mechanics. I'm also an avid rugby player who is currently on the UW Rugby Team.<br>
             `;
         }
     },
@@ -70,18 +71,24 @@ Type <span class="warning">'github'</span> to view my GitHub profile
 ────────────────────────────────────────<br>
 <br>
 <span class="success">Languages:</span><br>
-  Dart  ████████████████░░  85%<br>
-  R     ███████████████░░░  75%<br>
-  Python████████████████░░  80%<br>
-  Java  ██████████████░░░░  70%<br>
-  SQL   ████████████░░░░░░  65%<br>
+  Dart <br>
+  R <br>
+  Python<br>
+  Java<br>
+  SQL<br>
+  Javascript<br>
+  TypeScript<br>
+  HTML<br>
+  C+<br>
+  CSS<br>
 <br>
 <span class="success">Frameworks & Tools:</span><br>
   • Flutter & Provider<br>
   • Git & GitHub<br>
   • VSCode<br>
-  • Data Visualization<br>
-  • Mobile UI/UX Design
+  • Mobile UI/UX Design<br>
+  • React<br>
+  • Jira<br>
             `;
         }
     },
@@ -93,14 +100,16 @@ Type <span class="warning">'github'</span> to view my GitHub profile
 ────────────────────────────────────────<br>
 <br>
 <span class="success">University of Washington</span><br>
-Computer Science Major<br>
+Major: Computer Science<br>
+Minor: Data Science<br>
 <br>
 Relevant Coursework:<br>
-  • Mobile App Development<br>
-  • Data Structures & Algorithms<br>
-  • Data Analysis (INFO201)<br>
-  • Cybersecurity<br>
-  • Database Systems
+  • Interaction Programming(Mobile App Development)<br>
+  • Algorithms<br>
+  • Data Structures and Parallelism<br>
+  • Machine Learning<br>
+  • Computer Securities<br>
+  • Database Internals<br>
             `;
         }
     },
@@ -111,10 +120,10 @@ Relevant Coursework:<br>
 <span class="info">Contact Information</span><br>
 ────────────────────────────────────────<br>
 <br>
-📧 Email:    your.email@example.com<br>
-💼 LinkedIn: linkedin.com/in/yourprofile<br>
-🐙 GitHub:   github.com/yourusername<br>
-📱 Phone:    (123) 456-7890<br>
+📧 Email:    vincenttuananpham@gmail.com<br>
+💼 LinkedIn: https://www.linkedin.com/in/vincent-pham-9294892b0/<br>
+🐙 GitHub:   https://github.com/vintpham<br>
+📱 Phone:    +1 (206) 380 1737<br>
 <br>
 Feel free to reach out for collaborations or opportunities!
             `;
@@ -123,7 +132,7 @@ Feel free to reach out for collaborations or opportunities!
     github: {
         description: "Open GitHub profile",
         execute: () => {
-            window.open('https://github.com/yourusername', '_blank');
+            window.open('https://github.com/vintpham', '_blank');
             return `<span class="success">Opening GitHub profile...</span>`;
         }
     },
@@ -148,7 +157,7 @@ const asciiArt = `
 const welcomeMessage = `
 <span class="ascii-art">${asciiArt}</span>
 <br>
-<span class="success">Welcome to my interactive portfolio!</span><br>
+<span class="success">Hi, I'm Vincent, and welcome to my interactive portfolio!</span><br>
 <br>
 Type <span class="warning">'help'</span> to see available commands.
 `;
